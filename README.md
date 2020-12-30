@@ -10,3 +10,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 # Language Servers
 
 Install `clangd` and `pyright`.
+
+# Python provider
+
+I use `pyenv` to setup a virtualenv for neovim. Explicitly specifying the provider improves load times for .py files.
