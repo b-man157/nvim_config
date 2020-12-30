@@ -13,4 +13,4 @@ Install `clangd` and `pyright` for C++ and Python support.
 
 # Python provider
 
-I use `pyenv` to setup a seperate virtualenv for neovim.
+I use `pyenv` to setup a seperate virtualenv for neovim. Explicitly specifying the provider improves load times for .py files.
