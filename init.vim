@@ -43,11 +43,18 @@ nmap <silent> <leader>/ :nohlsearch<CR>
 nnoremap <S-Tab> za
 
 
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 call plug#begin(stdpath('data') . '/plugged')
 
 Plug 'tmsvg/pear-tree'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim'
 Plug 'lifepillar/vim-gruvbox8'
 Plug 'semanser/vim-outdated-plugins'
 
@@ -68,6 +75,8 @@ if has('folding')
 endif
 
 
+set completeopt=menuone,noinsert
+let g:completion_confirm_key = "\<C-y>"
 lua require("lsp")
 
 
