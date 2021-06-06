@@ -6,5 +6,8 @@ lspconfig.util.default_config = vim.tbl_extend(
   { on_attach = require 'completion'.on_attach() }
 )
 
-lspconfig.clangd.setup{}
+lspconfig.clangd.setup{
+    filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda' }
+}
+
 lspconfig.pyright.setup{}

@@ -52,10 +52,13 @@ endif
 call plug#begin(stdpath('data') . '/plugged')
 
 Plug 'tmsvg/pear-tree'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 Plug 'lifepillar/vim-gruvbox8'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 Plug 'semanser/vim-outdated-plugins'
 
 call plug#end()
